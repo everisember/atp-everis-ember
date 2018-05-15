@@ -1,0 +1,28 @@
+<div class="title">
+  {{title}}
+</div>
+{{button-panel onclick=(action 'filterList')}}
+<div class="panel" {{action 'search'}}>
+  <img src="assets/images/search.png" height="40" width="40">
+  <span class="title">Buscar</span>
+</div>
+<div class="list">
+  {{#if model.length}}
+    <table class="main">
+      {{#each model as |tenista|}}
+        <tr class="row">
+          <td class="cell {{if (eq tenista.genero 'F') 'fem' 'mas'}}">{{tenista.nombre}}</td>
+          <td class="cell" {{action 'goToDetail' tenista.id}}>
+            <img src="assets/images/tennis.png" height="40" width="40">
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  {{else}}
+    <table>
+      <tr class="row">
+        <td class="cell">{{noResults}}</td>
+      </tr>
+    </table>
+  {{/if}}
+</div>

@@ -1,0 +1,49 @@
+html {
+  background-color: #F8AB5E;
+}
+
+.title {
+  font-size: 32px;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+}
+
+table {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 20px;
+}
+
+table.main {
+  background-color: #389466
+}
+
+.list {
+  font-size: 24px;
+  padding: 20px;
+  font-family: arial
+}
+
+.fem {
+  color: purple
+}
+
+.mas {
+  color: darkblue
+}
+
+.panel {
+  padding: 10px;
+  position: relative;
+  margin-left: 25%;
+}
+
+.search {
+  padding: 20px;
+  position: relative;
+  padding-left: 30%;
+}

@@ -1,0 +1,29 @@
+<div class="title">
+  {{searchLabel}}
+</div>
+
+<div class="search">
+  {{input type="text" value=name}}
+  <input type="button" value="Buscar" {{action 'search'}}>
+</div>
+
+<div class="list">
+  {{#if results.length}}
+    <table class="main">
+      {{#each results as |tenista|}}
+        <tr class="row">
+          <td class="cell {{if (eq tenista.genero 'F') 'fem' 'mas'}}">{{tenista.nombre}}</td>
+          <td class="cell" {{action 'goToDetail' tenista.id}}>
+            <img src="assets/images/tennis.png" height="40" width="40">
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  {{else}}
+    <table>
+      <tr class="row">
+        <td class="cell">{{noResults}}</td>
+      </tr>
+    </table>
+  {{/if}}
+</div>
